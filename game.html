@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="SLIKE/tab-icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+    <title>PMF Milioner</title>
+</head>
+<body>
+    <div class="game-container">
+        <div class="container-fluid sticky-top navigations">
+            <div class="row">
+                <nav class="navbar navbar-expand-sm  bg-dark navbar-dark sticky-top">
+                    <div class="container-fluid p-0">
+                        
+                            <i class="fa fa-money" id="logo"></i>
+                        
+                    <button class="navbar-toggler" type="button" onclick="prikaziMeniMobile()">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                        <div class="collapse navbar-collapse navigation-items" id="collapsibleNavbar">
+                            <ul class="navbar-nav list">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="pocniIgru()">Nova Igra</a>
+                                <!-- <button class="btn nav-link">Nova Igra</button> -->
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link praivla_igre"  href="#" id="praivla-igre">Uputstva</a>
+                            </li>
+                            <div class="dropDown">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle dropButton" href="#" onclick="otvoriPodatke()">O Projektu</a>
+                                </li> 
+                                <div class="dropDownItems" id="Projekat">
+                                    <span><b>Predmet: </b>Web Programiranje</span>
+                                    <ul>
+                                        <li><b>Profesor: </b>Sead Delalić</li>
+                                        <li><b>Asistent: </b>Irhad Fejzić</li>
+                                    </ul>
+                                    <span><b>Studij: </b>Teorijske Kompjuterske Nauke</span>
+                                    <br>
+                                    <span><b>Fakultet: </b>Prirodno-matematički fakultet</span>
+                                    <br>
+                                    <span><b>Naziv Projekta: </b>PMF "Ko želi biti milioner?"</span>
+                                    <br>
+                                    <span><b>Podaci o autoru:</b></span>
+                                        <ul>
+                                            <li>Sarah Hodžić</li>
+                                            <li><b>Godine: </b>21</li>
+                                            <li><b>Br. telefona: </b>+387603411849</li>
+                                            <li><b>Email: </b>sarah.hodzic@gmail.com</li>
+                                        </ul>
+                                </div> 
+                            </div>
+                            </ul>
+                        </div>
+                        
+                    
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="container-fluid main-div">
+            <div class="row">
+                <div class="col-9 question-column">
+                    <div class="row">
+                        <div class="question">
+                            <p id ="demo">---------------</p>
+                        </div>
+                    </div>
+                    <br>
+                <div class="row">
+                        <div class="answers">
+                            <button class="btn btn-secondary m-4" onclick="izaberiOdgovor(1)"><span style="color: gold;">A.</span></button>
+                            <button class="btn btn-secondary m-4" onclick="izaberiOdgovor(2)"><span style="color: gold;">B.</span></button>
+                            <br>
+                            <button class="btn btn-secondary m-4" onclick="izaberiOdgovor(3)"><span style="color: gold;">C.</span></button>
+                            <button class="btn btn-secondary m-4" onclick="izaberiOdgovor(4)"><span style="color: gold;">D.</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 scores">
+                    <div class="row red1">
+                        <div class="container-fluid lifeline">
+                            <div class="life">
+                                <img src="./SLIKE/audience.png" alt="Pomoc publike" onclick="audience()" id="audienceHelping">
+                            </div>
+                            <div class="life">
+                                <img src="./SLIKE/fifty_fifty.png" alt="50/50" onclick="fiftyFifty()" id="fiftyFifty">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row red2">
+                        <div class="lifeline_audience">
+                            <div class="pitanje">
+                                <span style="color: gold;">A.</span>
+                                <div class="progress-bar1">
+                                    <span data-width="90%"></span>
+                                </div>
+                            </div>
+                            <div class="pitanje">
+                                <span style="color: gold;">B.</span>
+                                <div class="progress-bar1">
+                                    <span data-width="80%"></span>
+                                </div>
+                            </div>
+                            <div class="pitanje">
+                                <span style="color: gold;">C.</span>
+                                <div class="progress-bar1">                                    
+                                    <span data-width="70%"></span>
+                                </div>
+                            </div>
+                            <div class="pitanje">
+                                <span style="color: gold;">D.</span>
+                                <div class="progress-bar1">  
+                                    <span data-width="60%"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p id="score"></p>
+                        <ol class="score-list">
+                            <li class="prize1">1 MILION</li>
+                            <li class="prize">500,000 KM</li>
+                            <li class="prize">250,000 KM</li>
+                            <li class="prize">125,000 KM</li>
+                            <li class="prize">64,000 KM</li>
+                            <li class="prize1">32,000 KM</li>
+                            <li class="prize">16,000 KM</li>
+                            <li class="prize">8,000 KM</li>
+                            <li class="prize">4,000 KM</li>
+                            <li class="prize">2,000 KM</li>
+                            <li class="prize1">1,000 KM</li>
+                            <li class="prize">500 KM</li>
+                            <li class="prize">300 KM</li>
+                            <li class="prize">200 KM</li>
+                            <li class="prize">100 KM</li>
+                        </ul>
+                    </div>
+                </div>
+           </div>
+        </div>
+        <br>
+        
+        
+        <div class="modal2" id="modal2">
+            <div class="poruka" id="poruka">
+                <div class="tacanOdg"></div>
+                <br>
+                <div class="cestitka"></div>
+                <br>
+                <button class="newGame" id="newGame" onclick="novaIgra()">Započni novu igru</button>
+            </div>
+        </div>
+        <div class="pozadina" id="pozadina1"></div>
+
+
+        <div class="modal1" id="modal1">
+            <div class="naslov">
+                <div class="naziv">Pravila Igre</div>
+                <button class="iks" id="iks" onclick="zatvori()">&times;</button>
+            </div>
+            <div class="rules">
+                Igra se sastoji od pitanja sa četiri ponuđena odgovora, pri čemu se težina pitanja
+                postepeno povećava.
+                Igraču se postavljaju serije pitanja, a svako pitanje ima četiri ponuđena odgovora.
+                Igrač bira jedan od ponuđenih odgovora kao svoj konačan odgovor.
+                Ako je odgovor tačan, igrač prelazi na sljedeće pitanje sa većom nagradom. Ako je
+                odgovor netačan, igra se završava, a igrač osvaja nagradu koja odgovara posljednjem
+                tačnom odgovoru.
+            </div>
+        </div>
+        <div class="pozadina" id="pozadina"></div>
+   
+        <footer class="footer-area">
+			
+			<div class="social-media">
+				<a href="https://www.instagram.com/sarah.hodzic27/?hl=en"><img src="SLIKE/instagram.png" alt="Ikona Instagram"></a>
+				<a href="https://www.facebook.com/profile.php?id=100008509007748"><img src="SLIKE/facebook.png" alt="Ikona Facebook"></a>
+				<a href="https://www.linkedin.com/in/sarah-hod%C5%BEi%C4%87-9574b229a/"><img src="SLIKE/linkedin.png" alt="Ikona LinkedIn"></a>
+			</div>
+			<hr style="width:70%; border: 1px  solid white;">
+			<p class="footer-info">
+				&copy; 2023 | <a href="mailto:sarah.hodzic27@gmail.com">sarah.hodzic27@gmail.com</a>
+			</p>
+		</footer>
+    </div>
+    <script src="./JS/logic.js"></script>
+    <script src="./JS/js_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+html, body{
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: #232D3F;
+    font-family: 'Poppins';
+}
+
+#logo{
+    font-size:48px;
+}
+
+.navigation-items{
+    margin-left: 20px;
+    color: white;
+}
+
+.btn{
+    width: 200px;
+    height: fit-content;
+    /* overflow-wrap: break-word; */
+    border: 1px solid white;
+    border-radius: 0px;
+    min-height: 100px;
+
+}
+
+.question-column{
+    /* background-color: gold; */
+    padding-top: 10%;
+    padding-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 92vh;  */
+    border: 1px solid white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.question{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    padding-top: 20px;
+    text-align: center;
+    /* white-space: pre-wrap;
+    word-wrap: break-word; */
+    height:100%;
+    width: 400px;
+    overflow-wrap: break-word;
+    padding: 10px;
+    /* width: 300px; */
+    border: 1px solid white;
+}
+
+.scores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* background-color: red; */
+    border: 1px solid white;
+}
+.lifeline .life{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border: 1px solid white; */
+    border-radius: 50%;
+    margin: 5px;
+    background-color: gold;
+}
+
+.life img{
+    width: 100%;
+    margin: 0px 20px;
+    object-fit: contain;
+}
+.lifeline{
+    /* width: 100%; */
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px solid white;
+    justify-content: center;
+    text-align: center;
+    
+
+}
+.life img:hover {
+    /* box-shadow: 0px 0px 10px 5px white; */
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.red1{
+    width: 100%;
+    margin-bottom: 10%;
+    
+}
+
+.scores ol{
+    list-style-type: none;
+    text-align: end;
+}
+
+.prize1{
+    font-size:20px;
+    color: gold;
+}
+
+.active{
+    background-color: gold;
+    color: black;
+}
+
+.modal1{
+    /* display:none; */
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); 
+    transition: 200ms ease-in-out;
+    z-index: 10;
+    width: 600px;
+    max-width: 80%;
+    background-color: black;
+    border: 1px solid white;
+    padding: 10px;
+    text-align: justify;
+
+}
+
+.modal2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 10px;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); /* pogledati za sta je ovo */
+    transition: 200ms ease-in-out;
+    z-index: 10;
+    width: 600px;
+    max-width: 80%;
+    background-color: black;
+    border: 1px solid white;
+    padding: 10px;
+    text-align: justify;
+    min-height: 200px;
+
+}
+.poruka{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cestitka{
+    text-align: center;
+}
+
+.newGame {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid white;
+    transition: 0.75s ease-in-out;
+    color: white;
+    max-width: 40%;
+}
+
+.newGame:hover{
+    background-color: white;
+    color: black;
+
+}
+
+.naslov{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+.naslov .naziv{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.naslov .iks{
+    border:none;
+    outline: none;
+    background: none;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+}
+
+.pozadina{
+    display: none;
+    position: fixed;
+    background-color: rgba(0,0,0,.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    /* background-color: red; */
+}
+
+.navigations{
+    z-index: 8;
+}
+
+.dropDown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropDownItems{
+    position:absolute;
+    display: none;
+    background-color: #343a40;
+    min-width: 400px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px;
+    border: 1px solid white;
+}
+
+.dropButton{
+    z-index: 1;
+}
+
+.disabledd{
+    background-color: white;
+}
+.answers button:disabled{
+    background-color: blue;
+}
+
+.lifeline_audience{
+    max-height: 0;
+    overflow: hidden;
+    /* background-color: black;  */
+    transition: max-height 0.75s ease-in-out;
+}
+
+.pitanje{
+    margin-bottom: 10px;
+}
+
+.progress-bar1{
+    position: relative;
+    
+    width: 200px;
+    height: 15px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 3px 4px 5px 0px rgba(204,185 185 / .75);
+}
+
+.progress-bar1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    color: white;
+    font-size: 10px;
+    line-height: 1.7;
+    text-align: center;
+    border-radius: 30px;
+    background: linear-gradient(90deg, rgba(76, 175, 80, 1) 50%, rgba(50, 222, 132, 1) 100%);
+    transition: width .5s linear;
+}
+
+.red2{
+    width: 100%;
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    .question-column{
+        font-size: 15px !important;
+    }
+    .question{
+        width: 250px !important;
+    }
+    .answers button{
+        /* max-width: 40px; */
+        font-size: 15px !important;
+    }
+    .prize1{
+        font-size: 16px !important;
+    }
+    .prize{
+        font-size: 13px;
+    }
+    .life{
+        width: 100px !important;
+        height: 50px !important;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 560px){
+    .question{
+        width: 300px !important;
+    }
+
+    .prize1{
+        font-size: 18px !important;
+    }
+    .prize{
+        font-size: 15px;
+    }
+    .life{
+        width: 100px !important;
+        height: 50px !important;
+    }
+}

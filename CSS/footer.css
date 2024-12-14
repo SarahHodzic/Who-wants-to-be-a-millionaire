@@ -1,0 +1,33 @@
+.footer-area img{
+	height: 2em;
+	width: 2em;
+	transition: transform .5s;
+	
+}
+.footer-area img:hover{
+	transform: scale(1.1);
+}
+
+.footer-area{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start ;
+	align-items: center;
+	flex-wrap: wrap;
+	background-color: var(--primaryColor);
+	background: var(--gradiant);
+	padding-bottom: .5em;
+	padding-top: 1em;
+	margin: 0;
+}
+
+.social-media a{
+	margin: .2em;
+}
+
+.footer-info a{
+	color: white;
+	text-decoration: none;
+}
+
+
